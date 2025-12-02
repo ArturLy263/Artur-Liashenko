@@ -36,11 +36,11 @@ class TemperatureStream:
 #             print(f"Normal temperature reading")
 
 if __name__ == '__main__':
-    stream = TemperatureStream(RAW_KELWIN_DATA, 50)  # создаём итератор
-    celsius_generator = kelvin_to_celsius_converter(stream)  # передаём итератор в генератор
+    stream = TemperatureStream(RAW_KELWIN_DATA, 50) 
+    celsius_generator = kelvin_to_celsius_converter(stream) 
 
-    for temp_c in celsius_generator:  # идём по значениям в Цельсиях
-        if temp_c > stream.threshold:  # проверяем, больше ли порога
+    for temp_c in celsius_generator:  
+        if temp_c > stream.threshold:  
             print(f"ALERT: {temp_c:.2f} °C - High Reading")
         else:
             print(f"Normal temperature reading: {temp_c:.2f} °C")
