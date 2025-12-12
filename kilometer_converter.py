@@ -1,6 +1,5 @@
-CONVERTION_FACTOR = 0.621371
-
 def convert_distance(value, direction):
+    CONVERTION_FACTOR = 0.621371
     if direction == "KM_TO_MI":
         result = value * CONVERTION_FACTOR
         unit = "miles"
@@ -46,5 +45,3 @@ def run_converter():
 
 
 if __name__ == "__main__":
-    while run_converter():
-        pass
